@@ -22,7 +22,7 @@ let model = {
         "description": "Fried eggs, bacon, toast, cherry tomatoes",
         "weight": "400 g",
         "discount": "20 %",
-        "price": "6.99 $"
+        "price": "6.99"
     },
     {
         "id": 1,
@@ -32,7 +32,7 @@ let model = {
         "description": "Oatmeal with seasonal berries and berry syrup",
         "weight": "120 g",
         "discount": "10 %",
-        "price": "3.25 $"
+        "price": "4.25"
     },
     {
         "id": 2,
@@ -42,7 +42,7 @@ let model = {
         "description": "Oatmeal with seasonal berries and berry syrup",
         "weight": "120 g",
         "discount": "10 %",
-        "price": "3.25 $"
+        "price": "6.25"
     },
     {
         "id": 3,
@@ -52,6 +52,6 @@ let model = {
         "description": "Oatmeal with seasonal berries and berry syrup 2",
         "weight": "120 g 2",
         "discount": "12 %",
-        "price": "3.25 $ 2"
+        "price": "3.25"
     }
 ]}
