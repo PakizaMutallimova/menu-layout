@@ -1,4 +1,4 @@
-{
+let model = {
     "categories": [
     {
         "id": 0,
