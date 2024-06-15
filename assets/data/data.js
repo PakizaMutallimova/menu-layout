@@ -56,3 +56,67 @@ let model = {
         }
     ]
 }
+
+
+let bar = {
+    "barCategories": [
+        {
+            "id": "cocktails",
+            "name": "COCKTAILS"
+        },
+        {
+            "id": 'wine',
+            "name": "WINE"
+        },
+        {
+            "id": "beer",
+            "name": "BEER"
+        },
+        {
+            "id": 'non-alcohol',
+            "name": "NON-ALCOHOL"
+        }
+    ],
+    "barItems": [
+        {
+            "id": 0,
+            "categoryId": "wine",
+            "name": "wine",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/456678766169864.jpg",
+            "description": "Fried eggs, bacon, toast, cherry tomatoes",
+            "weight": "50 g",
+            "discount": "20 %",
+            "price": "22.99"
+        },
+        {
+            "id": 1,
+            "categoryId": 1,
+            "name": "cocktail",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "description": "lorem ipsum dolar set",
+            "weight": "100 g",
+            "discount": "10 %",
+            "price": "8.25"
+        },
+        {
+            "id": 1,
+            "categoryId": 'cocktails',
+            "name": "cocktail with lime",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "description": "lorem ipsum dolar set",
+            "weight": "100 g",
+            "discount": "10 %",
+            "price": "8.25"
+        },
+        {
+            "id": 1,
+            "categoryId": 'non-alcohol',
+            "name": "non-alcohol",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "description": "lorem ipsum dolar set",
+            "weight": "100 g",
+            "discount": "10 %",
+            "price": "8.25"
+        }
+    ]
+}

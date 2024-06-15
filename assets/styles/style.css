@@ -123,7 +123,7 @@ header{
 }
 
 .menu-title{
-    display: none;
+    display: block;
     h2{
         margin-left: 10px;
         font-size: 20px;
@@ -132,7 +132,7 @@ header{
 }
 
 .menu-items{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -223,16 +223,16 @@ span{
     width: 100%;
     position: relative;
     background-color: yellow;
-    display: flex;
+    display: none;
     align-items: center;
     border-radius: 32px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(236, 235, 235);
     margin-top: 10px;
     margin-bottom: 16px;
     input{
         border-radius: 32px;
         border: none;
-        background-color: rgb(206, 206, 206);
+        background-color: rgb(236, 235, 235);
         width: 96%;
         height: 30px;
         display: flex;
@@ -255,6 +255,7 @@ span{
 }
 
 .menu-categories{
+    display: none;
     width: 100%;
 }
 

@@ -1,9 +1,22 @@
 const menuItem = document.querySelector('.menu-items')
 const menuCategoties = document.querySelector('.menu-categories')
+const searchBar = document.querySelector('.search-bar')
+const menuTitle = document.querySelector('.menu-title')
+const mainMenuBtn = document.querySelector('.btn-menu')
+const arrowBack = document.querySelector('.arrow-back')
 const {categories, items} = model
+const {barCategories, barItems} = bar
+
+// -------------------------------------------------------------------------
 
 let itemsData = Object.keys(items).map((key) => [items[key]]);
 let categoriesData = Object.keys(categories).map((key) => [categories[key]]);
+
+let barItemsData = Object.keys(barItems).map((key) => [items[key]]);
+let barCategoriesData = Object.keys(barCategories).map((key) => [categories[key]]);
+// console.log(barItemsData, barCategoriesData);
+
+// -------------------------------------------------------------------------
 
 const dataItem = itemsData.map((item) => {
     return renderItem(item[0]);
@@ -38,8 +51,10 @@ function renderItem(item){
     </div>`;
 }
 
+// -------------------------------------------------------------------------
+
+                       /** main menu category */
 const category = categoriesData.map((cat) => {
-    // console.log(cat[0]);
     return renderCategory(cat[0])
 })
 
@@ -48,9 +63,6 @@ function renderCategory(category) {
         var {image} = item[0]
         return image
     })
-    console.log(imageItem[1]);
-    // console.log(image);
-    console.log(itemsData);
     let {id, name} = category
     return `
     <div class="category" id="${id}" style="background-image: url('${imageItem[id]}');">
@@ -61,10 +73,40 @@ function renderCategory(category) {
 
 menuCategoties.innerHTML += category.join("")
 
+mainMenuBtn.addEventListener('click', () => {
+    searchBar.style.display = "flex"
+    menuCategoties.style.display = "block"
+    menuTitle.style.display = "none"
+    menuItem.style.display = "none"
+    // if (arrowBack.clicked = "true") {
+    //     searchBar.style.display = "none"
+    //     menuCategoties.style.display = "none"
+    //     menuTitle.style.display = "block"
+    //     menuItem.style.display = "flex"
+    // }
+})
 
+arrowBack.addEventListener("click", ()=>{
+    window.location.href = "./index.html"
+})
+
+// -----------------------------------------------------------------
+                        /** bar category */
+
+const barDataCategory = barCategoriesData.map((barCat) => {
+    console.log(barCat[0]);
+    return renderBarCategories(barCat[0])
+});
+
+function renderBarCategories(barCat) {
+    console.log(barCat);
+    // return `
+    // <div class="category" id="${}" style="background-image: url('${}');">
+    //     <div class="image-opacity"></div>
+    //     <div class="category-header">${}</div>
+    // </div>`
+}
 
 
 
 // const{categoryId, description, discount, id, image, name, price, weight} = item[0]
-
-
