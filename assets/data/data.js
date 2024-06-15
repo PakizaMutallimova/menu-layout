@@ -61,19 +61,19 @@ let model = {
 let bar = {
     "barCategories": [
         {
-            "id": "cocktails",
+            "id": 0,
             "name": "COCKTAILS"
         },
         {
-            "id": 'wine',
+            "id": 1,
             "name": "WINE"
         },
         {
-            "id": "beer",
+            "id": 2,
             "name": "BEER"
         },
         {
-            "id": 'non-alcohol',
+            "id": 3,
             "name": "NON-ALCOHOL"
         }
     ],
@@ -82,7 +82,7 @@ let bar = {
             "id": 0,
             "categoryId": "wine",
             "name": "wine",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/456678766169864.jpg",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
             "description": "Fried eggs, bacon, toast, cherry tomatoes",
             "weight": "50 g",
             "discount": "20 %",
@@ -92,7 +92,7 @@ let bar = {
             "id": 1,
             "categoryId": 1,
             "name": "cocktail",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/456678766169864.jpg",
             "description": "lorem ipsum dolar set",
             "weight": "100 g",
             "discount": "10 %",
@@ -102,7 +102,7 @@ let bar = {
             "id": 1,
             "categoryId": 'cocktails',
             "name": "cocktail with lime",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/264140938451485.jpg",
             "description": "lorem ipsum dolar set",
             "weight": "100 g",
             "discount": "10 %",
@@ -112,7 +112,7 @@ let bar = {
             "id": 1,
             "categoryId": 'non-alcohol',
             "name": "non-alcohol",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
+            "image": "https://dyj6gt4964deb.cloudfront.net/images/711811792125277.jpg",
             "description": "lorem ipsum dolar set",
             "weight": "100 g",
             "discount": "10 %",

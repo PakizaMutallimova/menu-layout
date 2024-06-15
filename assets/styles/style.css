@@ -35,7 +35,7 @@ body{
     cursor: pointer;
     position: fixed;
     top: 10px;
-    left: 40px;
+    margin-left: 20px;
     z-index: 1000;
     i{
         font-size: 30px;
@@ -289,7 +289,9 @@ span{
     position: absolute;
 }
 
-
+.bar-categories{
+    display: none;
+}
 
 
 

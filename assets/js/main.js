@@ -1,8 +1,10 @@
 const menuItem = document.querySelector('.menu-items')
 const menuCategoties = document.querySelector('.menu-categories')
+const barCategoriesBtn = document.querySelector('.bar-categories')
 const searchBar = document.querySelector('.search-bar')
 const menuTitle = document.querySelector('.menu-title')
 const mainMenuBtn = document.querySelector('.btn-menu')
+const barBtn = document.querySelector('.btn-bar')
 const arrowBack = document.querySelector('.arrow-back')
 const {categories, items} = model
 const {barCategories, barItems} = bar
@@ -12,8 +14,8 @@ const {barCategories, barItems} = bar
 let itemsData = Object.keys(items).map((key) => [items[key]]);
 let categoriesData = Object.keys(categories).map((key) => [categories[key]]);
 
-let barItemsData = Object.keys(barItems).map((key) => [items[key]]);
-let barCategoriesData = Object.keys(barCategories).map((key) => [categories[key]]);
+let barItemsData = Object.keys(barItems).map((key) => [barItems[key]]);
+let barCategoriesData = Object.keys(barCategories).map((key) => [barCategories[key]]);
 // console.log(barItemsData, barCategoriesData);
 
 // -------------------------------------------------------------------------
@@ -76,6 +78,7 @@ menuCategoties.innerHTML += category.join("")
 mainMenuBtn.addEventListener('click', () => {
     searchBar.style.display = "flex"
     menuCategoties.style.display = "block"
+    barCategoriesBtn.style.display = "none"
     menuTitle.style.display = "none"
     menuItem.style.display = "none"
     // if (arrowBack.clicked = "true") {
@@ -94,18 +97,36 @@ arrowBack.addEventListener("click", ()=>{
                         /** bar category */
 
 const barDataCategory = barCategoriesData.map((barCat) => {
-    console.log(barCat[0]);
+    // console.log(barCat[0]);
     return renderBarCategories(barCat[0])
 });
 
 function renderBarCategories(barCat) {
-    console.log(barCat);
-    // return `
-    // <div class="category" id="${}" style="background-image: url('${}');">
-    //     <div class="image-opacity"></div>
-    //     <div class="category-header">${}</div>
-    // </div>`
+    const barImageItem = barItemsData.map((item) => {
+        var {image:barImage} = item[0]
+        return barImage
+    })
+    const {id:barId, name:barName} = barCat
+    return `
+    <div class="category" id="${barId}" style="background-image: url('${barImageItem[barId]}');">
+        <div class="image-opacity"></div>
+        <div class="category-header">${barName}</div>
+    </div>`
 }
+
+barCategoriesBtn.innerHTML = barDataCategory.join("")
+
+console.log(barBtn);
+
+barBtn.addEventListener('click', () => {
+    barBtn.style.backgroundColor = "#f7906c"
+    barBtn.style.color = "white"
+    searchBar.style.display = "flex"
+    menuCategoties.style.display = "none"
+    barCategoriesBtn.style.display = "block"
+    menuTitle.style.display = "none"
+    menuItem.style.display = "none"
+})
 
 
 
