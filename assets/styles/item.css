@@ -1,3 +1,26 @@
 .item-layout{
     background-color: red;
 }
+
+
+.slider{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-item{
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
