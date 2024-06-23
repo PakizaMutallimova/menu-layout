@@ -2,6 +2,54 @@
     background-color: red;
 }
 
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-container{
+    display: flex;
+    margin: 15px 0;
+}
+
+.header-menu{
+    flex-direction: column;
+    *{
+        margin-top: 3px;
+    }
+}
+
+.raiting-place{
+    gap: 10px;
+    i{
+        font-size: 17px;
+    }
+    .cl-blue{
+        color: blue;
+    }
+    .cl-yellow{
+        color: rgb(245, 181, 6);
+    }
+    .cl-red{
+        color: red;
+    }
+    .cl-green{
+        color: green;
+    }
+}
+
+.social-media{
+    gap: 10px;
+    .icon-social{
+        background-color: orange;
+        border-radius: 50px;
+        i{
+            margin: 5px;
+            font-size: 25px;
+        }
+    }
+}
 
 .slider{
     display: flex;
@@ -24,3 +72,40 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.category-section{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+section{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    margin: 10px 0;
+    border-radius: 22px;
+}
+
+.card-section{
+    width: 100%;
+    height: 100%;
+}
+
+.card-sec-img{
+    width: 30%;
+    height: 100%;
+    border-radius: 22px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card-sec-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3{
+        font-size: 30px;
+    }
+}

@@ -130,4 +130,18 @@ barBtn.addEventListener('click', () => {
 
 
 
-// const{categoryId, description, discount, id, image, name, price, weight} = item[0]
+
+
+
+let base = '';
+var xhr = new XMLHttpRequest();
+xhr.onload = function () {
+    var reader = new FileReader();
+    reader.onloadend = function () {
+        base = reader.result;
+    }
+    reader.readAsDataURL(xhr.response);
+};
+xhr.open('GET', $('#file-image').attr("src"));
+xhr.responseType = 'blob';
+xhr.send();
