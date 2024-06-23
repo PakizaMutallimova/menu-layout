@@ -1,3 +1,11 @@
+body{
+    background-color: white;
+}
+
+.menu-place{
+    min-height: 100vh;
+}
+
 .item-layout{
     background-color: red;
 }
@@ -80,8 +88,6 @@
 
 section{
     width: 100%;
-    height: 100px;
-    background-color: red;
     margin: 10px 0;
     border-radius: 22px;
 }
@@ -89,13 +95,16 @@ section{
 .card-section{
     width: 100%;
     height: 100%;
+    margin: 15px 0;
+    box-shadow: #0e1e251f 0 0 7px;
+    border-radius: 20px;
 }
 
 .card-sec-img{
     width: 30%;
     height: 100%;
-    border-radius: 22px;
     img{
+        border-radius: 20px;
         width: 100%;
         height: 100%;
     }
@@ -104,8 +113,16 @@ section{
 .card-sec-info{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    width: 70%;
+    padding: 0px 5px;
+    *{
+        margin: 0;
+    }
     h3{
-        font-size: 30px;
+        font-size: 25px;
+    }
+    &span:first-child{
+        font-size: 1px;
     }
 }

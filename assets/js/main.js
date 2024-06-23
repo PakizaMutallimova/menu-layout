@@ -131,17 +131,15 @@ barBtn.addEventListener('click', () => {
 
 
 
-
-
-let base = '';
-var xhr = new XMLHttpRequest();
-xhr.onload = function () {
-    var reader = new FileReader();
-    reader.onloadend = function () {
-        base = reader.result;
-    }
-    reader.readAsDataURL(xhr.response);
-};
-xhr.open('GET', $('#file-image').attr("src"));
-xhr.responseType = 'blob';
-xhr.send();
+// let base = '';
+// var xhr = new XMLHttpRequest();
+// xhr.onload = function () {
+//     var reader = new FileReader();
+//     reader.onloadend = function () {
+//         base = reader.result;
+//     }
+//     reader.readAsDataURL(xhr.response);
+// };
+// xhr.open('GET', $('#file-image').attr("src"));
+// xhr.responseType = 'blob';
+// xhr.send();
