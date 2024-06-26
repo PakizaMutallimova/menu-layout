@@ -16,7 +16,6 @@ let categoriesData = Object.keys(categories).map((key) => [categories[key]]);
 
 let barItemsData = Object.keys(barItems).map((key) => [barItems[key]]);
 let barCategoriesData = Object.keys(barCategories).map((key) => [barCategories[key]]);
-// console.log(barItemsData, barCategoriesData);
 
 // -------------------------------------------------------------------------
 
@@ -56,6 +55,7 @@ function renderItem(item){
 // -------------------------------------------------------------------------
 
                        /** main menu category */
+
 const category = categoriesData.map((cat) => {
     return renderCategory(cat[0])
 })
@@ -81,12 +81,6 @@ mainMenuBtn.addEventListener('click', () => {
     barCategoriesBtn.style.display = "none"
     menuTitle.style.display = "none"
     menuItem.style.display = "none"
-    // if (arrowBack.clicked = "true") {
-    //     searchBar.style.display = "none"
-    //     menuCategoties.style.display = "none"
-    //     menuTitle.style.display = "block"
-    //     menuItem.style.display = "flex"
-    // }
 })
 
 arrowBack.addEventListener("click", ()=>{
@@ -97,7 +91,6 @@ arrowBack.addEventListener("click", ()=>{
                         /** bar category */
 
 const barDataCategory = barCategoriesData.map((barCat) => {
-    // console.log(barCat[0]);
     return renderBarCategories(barCat[0])
 });
 
@@ -127,19 +120,3 @@ barBtn.addEventListener('click', () => {
     menuTitle.style.display = "none"
     menuItem.style.display = "none"
 })
-
-
-
-
-// let base = '';
-// var xhr = new XMLHttpRequest();
-// xhr.onload = function () {
-//     var reader = new FileReader();
-//     reader.onloadend = function () {
-//         base = reader.result;
-//     }
-//     reader.readAsDataURL(xhr.response);
-// };
-// xhr.open('GET', $('#file-image').attr("src"));
-// xhr.responseType = 'blob';
-// xhr.send();
