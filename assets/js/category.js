@@ -2,7 +2,7 @@
 // console.log(data().mealCategory);
 
 
-let datas = {
+const datas = {
     "categories": [
         {
             "id": 0,
