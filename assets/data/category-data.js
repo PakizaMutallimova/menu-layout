@@ -14,7 +14,7 @@
 
 // console.log(await postData());
 
-const dataForCategory = [
+const mealCategory = [
     {
         name: "breakfast",
         image: "https://dyj6gt4964deb.cloudfront.net/images/9610964997582898.jpg",
@@ -62,7 +62,10 @@ const dataForCategory = [
         image: "https://dyj6gt4964deb.cloudfront.net/images/7108784455317878.jpg",
         category: "meal",
         price: 19.9
-    },
+    }
+]
+
+const barCategory = [
     {
         name: "cocktail",
         image: "https://dyj6gt4964deb.cloudfront.net/images/7723889110147378.jpg",
@@ -104,18 +107,39 @@ const dataForCategory = [
 
 // console.log(dataForCategory);
 
-const categorySection = document.querySelector('section')
-console.log(categorySection);
+const mealCategorySection = document.querySelector('#meal')
+const barCategorySection = document.querySelector('#bar')
 
-const dataCategoryItem = dataForCategory.map(categoryItem => {
-    // console.log(categoryItem);
-    return renderCategoryItems(categoryItem)
-    // return categoryItem
+const dataMealCategoryItem = mealCategory.map(categoryItem => {
+    return renderMealItems(categoryItem)
 })
 
-function renderCategoryItems(dataItem) {
+function renderMealItems(dataItem) {
     const { name, image, category, price } = dataItem
-    const sectionName = categorySection.querySelector('h2')
+    const sectionName = mealCategorySection.querySelector('h2')
+    console.log(sectionName);
+    sectionName.innerText = category
+    return `
+    <div id="${category}" class="card-section d-flex">
+        <div class="card-sec-img">
+            <img src="${image}" alt="">
+        </div>
+        <div class="card-sec-info">
+            <h3>${name}</h3>
+            <p>lorem ipsum</p>
+            <p>${price} <span>$</span></p>
+        </div>
+    </div>`
+}
+mealCategorySection.innerHTML += dataMealCategoryItem.join("")
+
+const dataBarCategoryItem = barCategory.map(categoryItem => {
+    return renderBarItems(categoryItem)
+})
+
+function renderBarItems(dataItem) {
+    const { name, image, category, price } = dataItem
+    const sectionName = barCategorySection.querySelector('h2')
     console.log(sectionName);
     sectionName.innerText = category
     return `
@@ -128,7 +152,5 @@ function renderCategoryItems(dataItem) {
             <p>${price} <span>$</span></p>
         </div>
     </div>`
-
 }
-
-categorySection.innerHTML += dataCategoryItem.join("")
+barCategorySection.innerHTML += dataBarCategoryItem.join("")
