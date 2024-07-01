@@ -1,67 +1,39 @@
-// import { data } from '.\assets\data\category-data.js';
-// console.log(data().mealCategory);
+import datas from '../data/category-data.js'
+const allCategorySection = document.querySelector('.category-sections')
+const { categories, items } = datas
 
 
-const datas = {
-    "categories": [
-        {
-            "id": 0,
-            "name": "BREAKFASTS"
-        },
-        {
-            "id": 1,
-            "name": "HOT MEALS"
-        },
-        {
-            "id": 2,
-            "name": "SALADS"
-        }
-    ],
-    "items": [
-        {
-            "categoryId": 0,
-            "name": "Full English breakfast",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/9610964997582898.jpg",
-            "description": "Fried eggs, bacon, toast, cherry tomatoes",
-            "weight": "400 g",
-            "discount": "20 %",
-            "price": "6.99 $"
-        },
-        {
-            "categoryId": 1,
-            "name": "1",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/217460674308904.jpg",
-            "description": "2",
-            "weight": "4",
-            "discount": "3",
-            "price": "5"
-        },
-        {
-            "categoryId": 1,
-            "name": "Oatmeal 1",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/217460674308904.jpg",
-            "description": "Oatmeal with seasonal berries and berry syrup",
-            "weight": "120 g",
-            "discount": "10 %",
-            "price": "3.25 $"
-        },
-        {
-            "categoryId": 1,
-            "name": "Oatmeal 2",
-            "image": "https://dyj6gt4964deb.cloudfront.net/images/217460674308904.jpg",
-            "description": "Oatmeal with seasonal berries and berry syrup",
-            "weight": "120 g",
-            "discount": "10 %",
-            "price": "3.25 $"
-        },
-        {
-            "categoryId": 2,
-            "name": "Oatmeal 3 Salad",
-            "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA/oAAAP9CAYAAAA94xYZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+",
-            "description": "2",
-            "weight": "4",
-            "discount": "3",
-            "price": "5"
-        }
-    ]
-}
+const productData = categories.map(category => `
+<section id=${category.id}>
+  <h2>${category.name}</h2>
+
+    ${items.map(product => category.id == product.categoryId ? `<div id="${product.categoryId}" class="card-section d-flex">
+    <div class="card-sec-img">
+        <img src="${product.image}" alt="">
+    </div>
+    <div class="card-sec-info">
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <p>${product.weight}</p>
+        <p>${product.price} <span>$</span></p>
+    </div>
+</div> ` : "").join("")}
+
+</section>`
+
+).join("")
+
+allCategorySection.innerHTML = productData
+
+
+// ------------------------------------------------------------
+/** slider item click **/
+
+const slider = document.querySelector('.slider')
+// slider.innerHTML = categories.map(category => `<a id=${category.id} class="slider-item" href="#${category.id}">${category.name}</a>`).join("")
+
+
+const sliderItems = document.querySelectorAll(".slider-item")
+slider.addEventListener('click', (e) => {
+    sliderItems.forEach(item => e.target.id == item.id ? item.classList.add("active") : item.classList.remove("active"))
+})

@@ -80,13 +80,19 @@ body{
 .slider-item{
     display: flex;
     align-items: center;
+    justify-content: center;
     min-width: 100px;
     height: 40px;
     margin-right: 10px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 8px;
+    border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    a{
+        color: black;
+        border: none;
+    }
 }
 
 .category-section{
@@ -134,4 +140,9 @@ section{
     &span:first-child{
         font-size: 1px;
     }
+}
+
+
+.active{
+    background-color: orange;
 }
