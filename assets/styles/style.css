@@ -49,12 +49,12 @@ header{
 
 .bg-header{
     position: relative;
-    background-image: url('https://dyj6gt4964deb.cloudfront.net/images/B25100754987454553.jpg');
     width: 100%;
     height: 100%;
-    background-position: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.bg-header img{
+    width: 100%;
 }
 
 .main-layout{

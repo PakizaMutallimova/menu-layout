@@ -52,10 +52,7 @@ body{
     .icon-social{
         background-color: orange;
         border-radius: 50px;
-        i{
-            margin: 5px;
-            font-size: 25px;
-        }
+        
     }
 }
 
@@ -89,10 +86,7 @@ body{
     border-radius: 8px;
     border: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    a{
-        color: black;
-        border: none;
-    }
+    color: black;
 }
 
 .category-section{
